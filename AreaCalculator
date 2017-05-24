@@ -1,0 +1,35 @@
+"""
+from Dongyun, Korea
+"""
+
+from math import pi
+from time import sleep #3??what meaning actually?
+
+from datetime import datetime
+now = datetime.now()
+
+print "Calculator is now starting!"
+
+print "Current time: %s-%s-%s, %s:%s" % (now.year, now.month, now.day, now.hour, now.minute)
+
+sleep(1) # 
+hint = "Don't forget to include the correct units.  \nExiting..."
+
+option = raw_input("Enter C for Circle or T for Triangle: ")
+option = option.upper()
+if option == 'C':
+  r = float(raw_input("Enter radius: "))
+  area = (r**2 )* pi ###
+  print "Hana Dool Set..."
+  sleep(1)
+  print "%.2f.\n%s" % (area,hint) #THIS,?
+
+elif option == 'T':
+  b = float(raw_input("Enter base: "))
+  h = float(raw_input("Enter height: "))
+  area = h * b / 2
+  print "Hana Dool Set..."
+  sleep(1)
+  print "%.2f\n%s" %(area, hint)
+else:
+  print "Error! Invaild shape selector specified. Exiting."
